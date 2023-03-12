@@ -13,4 +13,7 @@ pipeline {
                     sh 'docker login -u msd967 -p $DOCKERHUB_CREDENTIALS'
                 }
                 sh 'docker push msd967/web-app:latest
-
+            }
+        }
+    }
+}  
