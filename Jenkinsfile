@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'apt update -y && apt-get install docker.io -y'  
                 sh 'docker build -t msd967/web-app:latest .'
             }
         }
