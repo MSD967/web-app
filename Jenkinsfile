@@ -13,8 +13,8 @@ pipeline {
                 withCredentials([string(credentialsId: 'msd967', variable: 'DOCKERHUB_CREDENTIALS')]) {
                     sh 'docker login -u msd967 -p $DOCKERHUB_CREDENTIALS'
                 }
-                sh 'docker push msd967/web-app:latest
+                sh 'docker push msd967/web-app:latest'
             }
         }
     }
-}  
+}
